@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="decisionmaker.css">
+</head>
+<body>
+
+    <img src="Assets/persescoin.png" alt="Flipping Coin" class="coin" id="animatedCoin" style="display: none;">
+
+    <div id="container">
+        <h1>Decision💡Maker</h1>
+
+        <h4>Need to make a decision? Flip a coin!</h4>
+
+        <br><br>
+
+        <label for="numOfFlips">How many flips do you want to do?</label>
+        <input type="number" id="numOfFlips" min="1" max="501" value="1">
+
+        <br><br>
+
+        <input type="button" id="flipButton" value="Flip Coins" onclick="flipCoin()">
+
+        <br><br>
+
+        
+
+        <div id="results"></div>
+    </div>
+
+    <script>
+        <!--
+            function flipCoin() {
+                let flipNumber = document.getElementById("numOfFlips").value;
+                let results = document.getElementById("results");
+                let animatedCoin = document.getElementById("animatedCoin");
+
+                animatedCoin.style.display = 'inline';
+                animatedCoin.classList.toggle('flip-animation');
+                document.getElementById('container').classList.toggle('blur-background');
+                animatedCoin.classList.toggle('top-center');
+    
+                results.innerHTML = "";
+    
+                let headsNum = 0;
+                let tailsNum = 0;
+    
+                for (let i = 0; i < flipNumber; i++) {
+                    let randomFlip = Math.random();
+                    let result = randomFlip < 0.5 ? "heads" : "tails";
+                    let coinPic = document.createElement("img");
+    
+                    coinPic.src = "Assets/" + result.toLowerCase() + ".png";
+    
+                    if (result === "heads") {
+                    headsNum++;
+                    } else {
+                    tailsNum++;
+                    }
+                    results.appendChild(coinPic);
+                }
+                results.innerHTML = "<p>" + headsNum + " Heads!<br>" + tailsNum + " Tails!</p>" + results.innerHTML;
+
+                setTimeout(function() {
+                    animatedCoin.classList.toggle('flip-animation');
+                    document.getElementById('container').classList.toggle('blur-background');
+                    animatedCoin.style.display = 'none';
+                }, 1100);
+            }
+    -->
+    </script>
+</body>
+</html>
